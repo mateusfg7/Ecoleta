@@ -2,16 +2,16 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
-
-header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.content {
+#page-home {}
+#page-home .content {
   width: 90%;
   max-width: 1100px;
   
   margin: 0 auto;
+}
+
+#page-home header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
