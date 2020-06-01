@@ -1,3 +1,7 @@
+:root {
+	--title-color: #322153;
+}
+
 html {
   font-family: 'Roboto', sans-serif;
 }
@@ -8,6 +12,11 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Ubuntu', sans-serif;
+	color: var(--title-color);
 }
 
 #page-home {
@@ -36,7 +45,7 @@ a {
 #page-home header a {
 	display: flex;
 
-	color: #322153;
+	color: var(--title-color);
 	font-weight: 700;
 }
 
@@ -48,4 +57,12 @@ a {
 
 	width: 20px;
 	height: 20px;
+}
+
+#page-home main {
+	max-width: 560px;
+}
+
+#page-home main h1 {
+	font-size: 54px;
 }
