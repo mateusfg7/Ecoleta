@@ -6,6 +6,10 @@ body {
 	background: #f0f0f5;
 }
 
+a {
+	text-decoration: none;
+}
+
 #page-home {
 	height: 100vh;
 
@@ -21,7 +25,27 @@ body {
 }
 
 #page-home header{
+
+	margin-top: 48px;
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+
+#page-home header a {
+	display: flex;
+
+	color: #322153;
+	font-weight: 700;
+}
+
+#page-home header a span {
+	margin-right: 16px;
+	display: flex;
+
+	background-image: url('../assets/log-in.svg');
+
+	width: 20px;
+	height: 20px;
 }
