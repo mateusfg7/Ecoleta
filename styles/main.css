@@ -3,7 +3,10 @@ html {
 }
 
 #page-home {
+	height: 100vh;
 
+	background: url('../assets/home-background.svg') no-repeat;
+	background-position: 35vw bottom;
 }
 
 #page-home .content {
