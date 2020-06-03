@@ -18,7 +18,11 @@
 
 	#page-home main {
 		align-items: center;
-	}
+    }
+    
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 
