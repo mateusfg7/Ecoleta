@@ -4,16 +4,27 @@ const server = express()
 // configure public folder
 server.use(express.static("public"))
 
+
+// use template engine
+const nunjucks = require("nunjucks")
+nunjucks.configure("src/views/", {
+    express: server,
+    noCache: true
+})
+
+
+
+
 // # routes configures of the application #
 // homepage
 // req: resquisition
 // res: response
 server.get('/', (req, res) => {
-    res.sendFile(__dirname + "/views/index.html")
+    return res.render("index.html")
 })
 
 server.get('/create-point', (req, res) => {
-    res.sendFile(__dirname + "/views/create-point.html")
+    return res.render("create-point.html")
 })
 
 
