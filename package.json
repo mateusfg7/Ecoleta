@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mateusfg7/Ecoleta/issues"
   },
-  "homepage": "https://github.com/mateusfg7/Ecoleta#readme"
+  "homepage": "https://github.com/mateusfg7/Ecoleta#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
