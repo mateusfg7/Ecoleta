@@ -2,7 +2,7 @@
   "name": "Ecoleta",
   "version": "1.0.0",
   "description": "Aplicação Ecoleta feita na Next Level Week #1 da Rocketseat, feita com HTML e CSS puro.",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/mateusfg7/Ecoleta.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Rocketseat/Mateus Felipe",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mateusfg7/Ecoleta/issues"
