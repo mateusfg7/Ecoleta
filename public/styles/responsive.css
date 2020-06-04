@@ -25,7 +25,15 @@
     }
 
     #page-search-results .cards img {
-        height: 25w0px;
+        height: 250px;
+    }
+
+    #page-create-point .field-group {
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field {
+        margin-left: 0;
     }
 }
 
