@@ -4,7 +4,7 @@
   "description": "Aplicação Ecoleta feita na Next Level Week #1 da Rocketseat, feita com HTML e CSS puro.",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
