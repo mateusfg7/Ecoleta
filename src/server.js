@@ -61,6 +61,7 @@ server.post("/savepoint", (req, res) => {
     db.run(query, values, function (err) {
         if (err) {
             console.log(err);
+            return res.send("Erro no cadastro")
         }
 
         console.log("[personal] data registered in database");
