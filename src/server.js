@@ -1,56 +1,38 @@
-const express = require("express")
-const server = express()
+const express = require("express");
+const server = express();
 
 // get the database
-const db = require("./database/db")
+const db = require("./database/db");
 
 // configure public folder
-server.use(express.static("public"))
+server.use(express.static("public"));
 
 // able the use of req.body
-server.use(express.urlencoded({ extended: true }))
-
+server.use(express.urlencoded({ extended: true }));
 
 // use template engine
-const nunjucks = require("nunjucks")
+const nunjucks = require("nunjucks");
 nunjucks.configure("src/views/", {
     express: server,
-    noCache: true
-})
-
-
-
+    noCache: true,
+});
 
 // # routes configures of the application #
 // homepage
 // req: resquisition
 // res: response
-server.get('/', (req, res) => {
-    return res.render("index.html")
-})
+server.get("/", (req, res) => {
+    return res.render("index.html");
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-server.get('/create-point', (req, res) => {
-
+server.get("/create-point", (req, res) => {
     // query strings
     // console.log(req.query)
 
-    return res.render("create-point.html")
-})
+    return res.render("create-point.html");
+});
 
-server.post('/savepoint', (req, res) => {
-    
+server.post("/savepoint", (req, res) => {
     // req.body
     // console.log(req.body)
 
@@ -65,7 +47,7 @@ server.post('/savepoint', (req, res) => {
             city,
             items
         ) VALUES (?,?,?,?,?,?,?);
-    `
+    `;
     const values = [
         req.body.image,
         req.body.name,
@@ -73,50 +55,35 @@ server.post('/savepoint', (req, res) => {
         req.body.address2,
         req.body.state,
         req.body.city,
-        req.body.items
-    ]
+        req.body.items,
+    ];
 
-    db.run(query, values, function(err) {
+    db.run(query, values, function (err) {
         if (err) {
-            console.log(err)
+            console.log(err);
         }
 
-        console.log('[personal] data registered in database')
-        console.log(this)
+        console.log("[personal] data registered in database");
+        console.log(this);
 
-        return res.render("create-point.html", { saved: true })
-    })
-    
-    
-})
+        return res.render("create-point.html", { saved: true });
+    });
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-server.get('/search-results', (req, res) => {
-
+server.get("/search-results", (req, res) => {
     // get the datas of database
-    db.all(`SELECT * FROM places`, function(err, rows) {
+    db.all(`SELECT * FROM places`, function (err, rows) {
         if (err) {
-            console.log(err)
+            console.log(err);
         }
 
         // shows the HTML page with the datas of database
-        return res.render("search-results.html", { places: rows, total: rows.length })
-    })
-})
-
-
+        return res.render("search-results.html", {
+            places: rows,
+            total: rows.length,
+        });
+    });
+});
 
 // turn on the server
-server.listen(3000)
+server.listen(3000);
