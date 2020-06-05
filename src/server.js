@@ -39,7 +39,7 @@ server.get('/search-results', (req, res) => {
         }
 
         // shows the HTML page with the datas of database
-        return res.render("search-results.html", { place: rows })
+        return res.render("search-results.html", { places: rows, total: rows.length })
     })
 })
 
