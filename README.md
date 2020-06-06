@@ -212,5 +212,12 @@ Depois de criado, recomente as linhas e [rode o servidor](#iniciar-servidor).
 
 > Branch com o projeto original: [nlw_main_project](https://github.com/mateusfg7/Ecoleta/tree/nlw_main_projects)
 
+---
+
+[@Rocketseat](https://github.com/Rocketseat)
+
+<a href="https://github.com/Rocketseat" >
+    <img width="100" height="100" src="https://avatars0.githubusercontent.com/u/28929274?v=4">
+</a>
 
 
