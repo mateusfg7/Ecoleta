@@ -54,6 +54,10 @@ _Aplicação feita na Next Level Week #1 da [@Rocketseat](https://github.com/Roc
     - [Nodemon](https://nodemon.io/)
 - [SQLite3](https://www.sqlite.org/)
 
+#### APIs
+
+- [IBGE](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1)
+
 ### Uso
 
 #### Instalar dependencias:
@@ -167,9 +171,46 @@ e rode com
 ```bash
 $ node src/database/db.js
 ```
-O arquivo do banco de dados ficara salvo em src/database/database.db
-
 Depois de criado, recomente as linhas e [rode o servidor](#iniciar-servidor).
+
+> O arquivo do banco de dados ficara salvo em src/database/database.db
+
+---
+
+<table>
+    <tr align="center">
+        <td>
+            Code by
+        </td>
+        <td>
+            Instrutor
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <a href="https://github.com/mateusfg7">
+                <img width="100" height="100" src="https://avatars1.githubusercontent.com/u/40613276?v=4">
+            </a>
+        </td>
+        <td>
+            <a href="https://github.com/maykbrito">
+                <img width="100" height="100" src="https://avatars3.githubusercontent.com/u/6643122?v=4">
+            </a>
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <a href="https://github.com/mateusfg7">@mateusfg7</a>
+        </td>
+        <td>
+            <a hreft="https://github.com/maykbrito">@maykbrito</a>
+        </td>
+    </tr>
+</table>
+
+Branch com alterações pessoais: [master](https://github.com/mateusfg7/Ecoleta/tree/master)
+
+Branch com o projeto original: [nlw_main_project](https://github.com/mateusfg7/Ecoleta/tree/nlw_main_projects)
 
 
 
