@@ -203,7 +203,7 @@ Depois de criado, recomente as linhas e [rode o servidor](#iniciar-servidor).
             <a href="https://github.com/mateusfg7">@mateusfg7</a>
         </td>
         <td>
-            <a hreft="https://github.com/maykbrito">@maykbrito</a>
+            <a href="https://github.com/maykbrito">@maykbrito</a>
         </td>
     </tr>
 </table>
