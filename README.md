@@ -15,7 +15,7 @@ Página principal
 
 ![](docs/screenshots/home.png)
 
-<img width="500" src="docs/screenshots/home.png" alt="Home">
+<img width="600" src="docs/screenshots/home.png" alt="Home">
 
 
 <div align="center">
