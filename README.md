@@ -11,6 +11,10 @@
 
 Ecoleta é uma aplicação que ajuda a encontrar pontos de coleta de lixo reciclável no Brasil.
 
+Página principal
+![](docs/screenshots/home.png)
+
+
 <div align="center">
     <table>
         <tr align="center">
