@@ -208,8 +208,9 @@ Depois de criado, recomente as linhas e [rode o servidor](#iniciar-servidor).
     </tr>
 </table>
 
-Branch com alterações pessoais: [master](https://github.com/mateusfg7/Ecoleta/tree/master)
-Branch com o projeto original: [nlw_main_project](https://github.com/mateusfg7/Ecoleta/tree/nlw_main_projects)
+> Branch com alterações pessoais: [master](https://github.com/mateusfg7/Ecoleta/tree/master)
+
+> Branch com o projeto original: [nlw_main_project](https://github.com/mateusfg7/Ecoleta/tree/nlw_main_projects)
 
 
 
