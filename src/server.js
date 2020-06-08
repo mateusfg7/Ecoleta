@@ -1,6 +1,10 @@
 const showAndSaveLog = require("./log/log")
-const dateClass = new Date
-const date_hour = `${dateClass.getDay()}/${dateClass.getMonth()}/${dateClass.getFullYear()}-${dateClass.getHours()}:${dateClass.getMinutes()}:${dateClass.getSeconds()}`
+const now = () => {
+    const dateClass = new Date
+    const date_hour = `${dateClass.getDay()}/${dateClass.getMonth()}/${dateClass.getFullYear()}-${dateClass.getHours()}:${dateClass.getMinutes()}:${dateClass.getSeconds()}`
+    return date_hour
+}
+
 
 const express = require("express");
 const server = express();
@@ -26,14 +30,14 @@ nunjucks.configure("src/views/", {
 // req: resquisition
 // res: response
 server.get("/", (req, res) => {
-    showAndSaveLog('rendering index.html', date_hour)
+    showAndSaveLog('rendering index.html', now())
     return res.render("index.html");
 });
 
 server.get("/create-point", (req, res) => {
     // query strings
     // console.log(req.query)
-    showAndSaveLog('rendering create-point.html', date_hour)
+    showAndSaveLog('rendering create-point.html', now())
     return res.render("create-point.html");
 });
 
@@ -63,18 +67,18 @@ server.post("/savepoint", (req, res) => {
         req.body.items,
     ];
     
-    showAndSaveLog('registering point', date_hour)
+    showAndSaveLog('registering point', now())
     db.run(query, values, function (err) {
         if (err) {
-            showAndSaveLog('error when registering point', date_hour)
+            showAndSaveLog('error when registering point', now())
             console.log(err);
             return res.send("Erro no cadastro");
         }
 
-        showAndSaveLog('data registered in database', date_hour)
+        showAndSaveLog('data registered in database', now())
         console.log(this);
 
-        showAndSaveLog('rendering create-point.html', date_hour)
+        showAndSaveLog('rendering create-point.html', now())
         return res.render("create-point.html", { saved: true });
     });
 });
@@ -84,7 +88,7 @@ server.get("/search-results", (req, res) => {
 
     if (search == "") {
         // empity search
-        showAndSaveLog('rendering search-results.html', date_hour)
+        showAndSaveLog('rendering search-results.html', now())
         return res.render("search-results.html", { total: 0 });
     }
 
@@ -95,7 +99,7 @@ server.get("/search-results", (req, res) => {
         }
 
         // shows the HTML page with the datas of database
-        showAndSaveLog('rendering search-results.html', date_hour)
+        showAndSaveLog('rendering search-results.html', now())
         return res.render("search-results.html", {
             places: rows,
             total: rows.length,
