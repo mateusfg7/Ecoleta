@@ -1,4 +1,14 @@
 {
   "editor.formatOnSave": false,
-  "deno.enable": false
+  "deno.enable": false,
+  "sqltools.connections": [
+    {
+      "database": "${workspaceFolder:Ecoleta}/src/database/database.db",
+      "driver": "SQLite",
+      "group": "Ecoleta",
+      "name": "Ecoleta Database",
+      "previewLimit": 50
+    }
+  ],
+  "sqltools.useNodeRuntime": true
 }
