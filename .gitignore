@@ -5,3 +5,6 @@ yarn.lock
 
 # database
 *.db
+
+#logs
+log*
