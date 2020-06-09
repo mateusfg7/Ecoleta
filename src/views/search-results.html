@@ -3,52 +3,54 @@
 {% set pageId = "page-search-results" %}
 
 {% block title %}
-    <title>Resultado da pesquisa</title>
+  <title>Resultado da pesquisa</title>
 {% endblock title %}
 
 {% block styles %}
-    <link rel="stylesheet" href="/styles/search-results.css">
+  <link rel="stylesheet" href="/styles/search-results.css">
 {% endblock styles %}
 
 {% block content %}
-    {% include "partials/page-header.html" %}
+  {% include "partials/page-header.html" %}
 
-    <main>
+  <main>
 
-        {% if total > 0 %}
-            <h4>
-                <strong>{{ total }} pontos</strong>
-                encontrados
-            </h4>
+    {% if total > 0 %}
+      <h4>
+        <strong>{{ total }}
+          pontos</strong>
+        encontrados
+      </h4>
 
-            <div class="cards">
+      <div class="cards">
 
-                {% for place in places %}
-                    
-                    <div class="card">
-                        <img src="{{ place.image }}" alt="{{ place.name }}">
-                        <h1>{{ place.name }}</h1>
-                        <h3>{{ place.items }}</h3>
-                        <p>
-                            {{ place.city }}, {{ place.state }}
-                            <br>
-                            {{ place.address }}
-                            <br>
-                            {{ place.address2 }}
-                        </p>
-                    </div>
+        {% for place in places %}
 
-                {% endfor %}
+          <div class="card">
+            <img src="{{ place.image }}" alt="{{ place.name }}">
+            <h1>{{ place.name }}</h1>
+            <h3>{{ place.items }}</h3>
+            <p>
+              {{ place.city }},
+              {{ place.state }}
+              <br>
+              {{ place.address }}
+              <br>
+              {{ place.address2 }}
+            </p>
+          </div>
 
-            </div>
+        {% endfor %}
 
-        {% else %}
+      </div>
 
-            <h4><strong>Nenhum</strong> local encontrado</h4>
+    {% else %}
 
-        {% endif %}
+      <h4>
+        <strong>Nenhum</strong>
+        local encontrado</h4>
 
+    {% endif %}
 
-
-    </main>
+  </main>
 {% endblock content %}

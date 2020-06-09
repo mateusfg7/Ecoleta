@@ -1,14 +1,20 @@
-function showAndSaveLog(log_text, hour) {
-    const string = `[${hour}] ${log_text}`
-    
-    const filesystem = require('fs')
-    filesystem.writeFile('src/log/logs.txt', string+'\n', {flag: 'a'}, function (err) {
-        if(err) {
-            throw err
-        }
-    })
-    
-    console.log(string)
+const filesystem = require("fs");
+
+function showAndSaveLog(logText, hour) {
+  const string = `[${hour}] ${logText}`;
+
+  filesystem.writeFile(
+    "src/log/logs.txt",
+    `${string}\n`,
+    { flag: "a" },
+    (err) => {
+      if (err) {
+        throw err;
+      }
+    },
+  );
+
+  console.log(string);
 }
 
-module.exports = showAndSaveLog
+module.exports = showAndSaveLog;
