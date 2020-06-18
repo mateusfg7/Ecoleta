@@ -1,6 +1,6 @@
-const filesystem = require("fs");
+import filesystem from "fs";
 
-function showAndSaveLog(logText, hour) {
+function showAndSaveLog(logText: string, hour: string): void {
   const string = `[${hour}] ${logText}`;
 
   filesystem.writeFile(
@@ -17,4 +17,4 @@ function showAndSaveLog(logText, hour) {
   console.log(string);
 }
 
-module.exports = showAndSaveLog;
+export default showAndSaveLog;

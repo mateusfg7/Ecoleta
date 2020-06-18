@@ -1,12 +1,19 @@
-// import sqlite3 dependence
-const sqlite3 = require("sqlite3").verbose();
+import sqlite3 from 'sqlite3';
 
-// create the object that will perform operations on the database
 const db = new sqlite3.Database("./src/database/database.db");
 
-module.exports = db;
+export default db;
 
-// use the object of the database, for our operations
+interface IPlaces {
+  image: string,
+  name: string,
+  address: string,
+  address2: string,
+  state: string,
+  city: string,
+  items: string
+}
+
 db.serialize(() => {
   // create a table with SQL commands:
   // the firs param of data is the type of same
@@ -47,7 +54,7 @@ db.serialize(() => {
   //     "Papéis e Papelão"
   // ]
 
-  // function afterInsertData(err) {
+  // function afterInsertData(err: any): void {
   //     if (err) {
   //         return console.log(err)
   //     }
@@ -59,7 +66,7 @@ db.serialize(() => {
   // db.run(query, values, afterInsertData);
 
   // // query table data with SQL commands
-  // db.all(`SELECT * FROM  places`, function(err, rows) {
+  // db.all(`SELECT * FROM  places`, function(err, rows: [IPlaces]) {
   //     if (err) {
   //         return console.log(err)
   //     }
