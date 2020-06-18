@@ -61,25 +61,36 @@ _Aplicação feita na Next Level Week #1 da [@Rocketseat](https://github.com/Roc
 ### Uso
 
 #### Instalar dependencias:
-_com **npm**_
-```bash
-$ npm install
-```
-_com **yarn**_
-```bash
-$ yarn install
-```
+<details>
+  <summary><i>com <strong>npm</strong><i></summary>
+  
+  ```bash
+  $ npm install
+  ```
+</details>
+<details>
+  <summary><i>com <strong>yarn</strong><i></summary>
+  
+  ```bash
+  $ yarn install
+  ```
+</details>
 
 #### Iniciar servidor:
-
-_com **npm**_
-```bash
-$ npm start
-```
-_com **yarn**_
-```bash
-$ yarn run start
-```
+<details>
+  <summary><i>com <strong>npm</strong><i></summary>
+  
+  ```bash
+  $ npm start
+  ```
+</details>
+<details>
+  <summary><i>com <strong>yarn</strong><i></summary>
+  
+  ```bash
+  $ yarn run start
+  ```
+</details>
 
 > porta: 3000
 
