@@ -29,6 +29,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.1",
     "nodemon": "^2.0.4",
+    "ts-node-dev": "^1.0.0-pre.49",
     "typescript": "^3.9.5"
   }
 }
